@@ -20,7 +20,7 @@ private:
 public:
     int mostrarMenu();
     void verPrincipal();
-    ClassA* probarPolimorfimo();
+    vector<ClassA*> probarPolimorfimo();
 
     void probarClassB();
     void probarClassA();

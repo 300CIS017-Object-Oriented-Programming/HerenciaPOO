@@ -6,7 +6,7 @@ void View ::combinarReferencias()
 {
 }
 
-ClassA* View::probarPolimorfimo(){
+vector<ClassA*> View::probarPolimorfimo(){
 
     vector<ClassA*> miVector;
     miVector.push_back(new ClassA());
@@ -16,22 +16,26 @@ ClassA* View::probarPolimorfimo(){
     for (int i=0; i<miVector.size(); i++){
         miVector[i]->mostrar();
     }
-
+    return miVector;
 }
 
 void View::probarClassC()
 {
     // Cree un apuntador de ClassC y llame los métodos propios de la clase. Observe que puede acceder a métodos definidos en ClassA y en ClassB
+
 }
 
 void View::probarClassB()
 {
 // Cree un apuntador de ClassB y llame los métodos propios de la clase
+
+
 }
 
 void View::probarClassA()
 {
     // Cree un apuntador de ClassA y llame los métodos propios de la clase
+
 }
 
 int View::mostrarMenu()
