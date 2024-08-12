@@ -86,13 +86,13 @@ classDiagram
         - int atributo1b
         + ~ClassB() virtual 
         + metodoB()
-        + mostrar() abstract
+        + mostrar() 
     }
     
 
     class ClassC {
         - int atributo1c
-        + ~ClassC() virtual 
+        + ~ClassC() virtual
         + metodoC()
     }
     class View{
