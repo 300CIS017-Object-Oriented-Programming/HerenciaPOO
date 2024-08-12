@@ -1,3 +1,8 @@
+# Instalación
+* En Visual Studio Code escriba `ctr + shift + p` y escriba en la ventana que abre Cmake:Configure [ Debe tener instalado antes el plugin para C++, el plugin de CMAKE e instalados y configurados en su computador el compilador de C++, Make, y CMAKE]
+* En las opciones que aparecen seleccione `default`
+
+
 # Ejercicios
 
 1. Agrege la implementación a los métodos `probarClassA` `probarClassB` y `probarClassC` en donde llame los métodos y variables a los que tiene acceso de cada clase. El esqueleto de estos métodos se encuentra en el archivo View.cpp
@@ -62,3 +67,54 @@
 * **Atributos protegidos:** Note que desde `View.cpp` no puede acceder a ningún atributo protegido. Esto es pq para acceder a atributos protegidos solo puede hacerlo desde la clase que hereda el atributo protegido. Para este caso serían las clases `ClassA` y `ClassB`
 * **Herencia:** Note que la `ClassC` es la clase que tiene acceso a más métodos, pues es la clase que hereda tanto de `ClassA` como de `ClassB`
 * **Polimorfismo:** El polimorfismo es una propiedad de la programación orientada a objetos que me permite a partir de un mismo método tener comportamientos diferentes según el objeto desde el que se llame. Para lograrlo es necesario que los métodos que van a soportar este comportamiento estén declarados con la palabra `virtual`
+
+## LLamado de constructores en herencia
+![alt text](image.png)
+
+### Diagrama UML
+```mermaid
+classDiagram
+    class ClassA {
+        - int atributo1a
+        # int atributo2a
+        + ~ClassA() virtual 
+        + metodoA()
+        + mostrar()
+    }
+
+    class ClassB {
+        - int atributo1b
+        + ~ClassB() virtual 
+        + metodoB()
+        + mostrar() abstract
+    }
+    
+
+    class ClassC {
+        - int atributo1c
+        + ~ClassC() virtual 
+        + metodoC()
+    }
+    class View{
+        + probarClassA()
+        + probarClassB()
+        + probarClassC()
+        + mostrarMenu()
+        + probarPolimorfimo()
+        + verPrincipal()
+    }
+
+
+    class Main {
+    }
+
+    ClassA<|--ClassB
+    ClassB<|--ClassC
+    View --> ClassA : tiene
+    View --> ClassB : tiene
+    View --> ClassC : tiene
+
+    Main ..> View : Use
+```
+
+```

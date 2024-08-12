@@ -16,19 +16,13 @@ using std::vector;
 
 class View
 {
-private:
 public:
+    void probarClassA();
+    void probarClassB();
+    void probarClassC();
     int mostrarMenu();
     void verPrincipal();
-    vector<ClassA*> probarPolimorfimo();
-
-    void probarClassB();
-    void probarClassA();
-
-
-    void probarClassC();
-
-    void combinarReferencias();
+    vector<ClassA *> probarPolimorfimo();
 };
 #endif
-//#define
+// #define
