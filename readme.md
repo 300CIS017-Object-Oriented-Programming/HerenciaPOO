@@ -1,6 +1,38 @@
 # Instalación
+Luego de clonar este proyecto....
+
+## Visual studio code
 * En Visual Studio Code escriba `ctr + shift + p` y escriba en la ventana que abre Cmake:Configure [ Debe tener instalado antes el plugin para C++, el plugin de CMAKE e instalados y configurados en su computador el compilador de C++, Make, y CMAKE]
 * En las opciones que aparecen seleccione `default`
+
+## CLion
+ Abrir el proyecto existente:
+1. **Abre CLion**.
+
+2. **Selecciona "Open"** en la ventana principal o ve a `File → Open`.
+
+3. **Navega hasta la carpeta donde tienes el proyecto** (o el archivo `.cpp`).
+
+4. **Selecciona la carpeta del proyecto** (no solo el archivo).
+
+> 📄 **Nota**: CLion buscará automáticamente un `CMakeLists.txt` en esa carpeta para configurar el proyecto.  
+
+### 3. Permitir que CLion configure el proyecto
+
+Apenas abras el proyecto, CLion detectará automáticamente el archivo `CMakeLists.txt` y te preguntará si quieres cargar la configuración.
+
+Haz clic en **"Yes"** para permitirlo.
+
+---
+
+### 4. Verificar la configuración del entorno
+
+Ve a `File → Settings → Build, Execution, Deployment → Toolchains`.
+
+Asegúrate de que:
+
+- El compilador de C++ esté correctamente detectado.
+- CMake esté correctamente configurado.
 
 
 # Ejercicios
